@@ -12,7 +12,8 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/users/login', { username, password });
+      const res = await axios.post('https://military-asset-api.onrender.com/api/users/login', { username, password });
+
 
       const { token, role, baseId } = res.data; 
       login(token, role, baseId);               
